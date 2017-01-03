@@ -1,4 +1,4 @@
-# WDNotificationCenter
+# VisNotificationCenter
 Address some of the issues in the NSNotificationCenter
 
 # 有什么作用?
