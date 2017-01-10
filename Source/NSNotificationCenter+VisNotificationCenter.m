@@ -148,7 +148,7 @@ const NSString * VIS_NOTI_SEL      = @"SEL";
 }
 
 - (NSArray <NSDictionary *> *)vis_mapsWithObj:(id)obj {
-    return self.vis_mappingTable[[NSString stringWithFormat:@"%p", &obj]];
+    return self.vis_mappingTable[[NSString stringWithFormat:@"%p", obj]];
 }
 
 @end
