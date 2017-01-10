@@ -56,7 +56,7 @@ const NSString * VIS_NOTI_SEL      = @"SEL";
 }
 
 - (void)vis_addObserver:(id)observer selector:(SEL)aSelector name:(NSNotificationName)aName object:(id)anObject {
-    NSString * observerPath = [NSString stringWithFormat:@"%p", &observer];
+    NSString * observerPath = [NSString stringWithFormat:@"%p", observer];
     
     NSDictionary * currentNotifucationDictionary = [self vis_notificationDictionaryWithObserver:observer selector:NSStringFromSelector(aSelector) name:aName object:anObject];
     
@@ -76,7 +76,7 @@ const NSString * VIS_NOTI_SEL      = @"SEL";
 - (id<NSObject>)vis_addObserverForName:(NSNotificationName)name object:(id)obj queue:(NSOperationQueue *)queue usingBlock:(void (^)(NSNotification * _Nonnull))block {
     id observer = [self vis_addObserverForName:name object:obj queue:queue usingBlock:block];
     
-    NSString * observerPath = [NSString stringWithFormat:@"%p", &observer];
+    NSString * observerPath = [NSString stringWithFormat:@"%p", observer];
     
     NSDictionary * currentNotifucationDictionary = [self vis_notificationDictionaryWithObserver:observer selector:block name:name object:obj];
     
@@ -115,7 +115,7 @@ const NSString * VIS_NOTI_SEL      = @"SEL";
         return;
     }
     
-    NSString * observerPath = [NSString stringWithFormat:@"%p", &observer];
+    NSString * observerPath = [NSString stringWithFormat:@"%p", observer];
     
     if (![self.vis_mappingTable.allKeys containsObject:observerPath]) {
         return;
