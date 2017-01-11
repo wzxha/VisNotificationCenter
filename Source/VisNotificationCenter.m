@@ -21,7 +21,7 @@ const NSString * VIS_NOTI_NAME     = @"Name";
 const NSString * VIS_NOTI_OBJECT   = @"Object";
 const NSString * VIS_NOTI_SEL      = @"SEL";
 
-+ (NSNotificationCenter *)vis_defaultCenter {
++ (instancetype)vis_defaultCenter {
     static VisNotificationCenter * vis_defaultCenter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

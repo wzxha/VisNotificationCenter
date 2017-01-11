@@ -26,25 +26,25 @@
 }
 
 - (void)testAdd {
-    [[NSNotificationCenter vis_defaultCenter] addObserver:self selector:@selector(test) name:@"test" object:nil];
-    [[NSNotificationCenter vis_defaultCenter] addObserver:self selector:@selector(test) name:@"test" object:nil];
-    [[NSNotificationCenter vis_defaultCenter] addObserver:self selector:@selector(test) name:@"test" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(test) name:@"test" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(test) name:@"test" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(test) name:@"test" object:nil];
     
-    XCTAssert([[NSNotificationCenter vis_defaultCenter] vis_mapsWithObject:self].count == 1,
+    XCTAssert([[NSNotificationCenter defaultCenter] vis_mapsWithObject:self].count == 1,
               @"Repeat add observer");
 }
 
 - (void)testRemove {
-    [[NSNotificationCenter vis_defaultCenter] addObserver:self selector:@selector(test) name:@"test" object:nil];
-    [[NSNotificationCenter vis_defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(test) name:@"test" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     
-    XCTAssert([[NSNotificationCenter vis_defaultCenter] vis_mapsWithObject:self].count == 0,
+    XCTAssert([[NSNotificationCenter defaultCenter] vis_mapsWithObject:self].count == 0,
               @"The observer has not been removed");
     
-    [[NSNotificationCenter vis_defaultCenter] addObserver:self selector:@selector(test) name:@"test" object:nil];
-    [[NSNotificationCenter vis_defaultCenter] removeObserver:self name:@"test" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(test) name:@"test" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"test" object:nil];
     
-    XCTAssert([[NSNotificationCenter vis_defaultCenter] vis_mapsWithObject:self].count == 0,
+    XCTAssert([[NSNotificationCenter defaultCenter] vis_mapsWithObject:self].count == 0,
               @"The observer has not been removed");
 }
 

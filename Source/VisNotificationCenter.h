@@ -15,7 +15,7 @@ extern NSString * VIS_NOTI_SEL;
 
 @interface VisNotificationCenter : NSNotificationCenter
 
-+ (NSNotificationCenter *)vis_defaultCenter;
++ (instancetype)vis_defaultCenter;
 
 - (NSDictionary <NSString *, NSArray *> *)vis_allObservers;
 - (NSArray <NSDictionary *> *)vis_mapsWithObject:(id)obj;

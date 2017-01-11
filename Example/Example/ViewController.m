@@ -19,9 +19,9 @@
     
     CGFloat time = CACurrentMediaTime();
     for (int i = 0; i < 10000; i++) {
-        [[NSNotificationCenter vis_defaultCenter] addObserver:self selector:@selector(test) name:@"test" object:nil];
-        [[NSNotificationCenter vis_defaultCenter] postNotificationName:@"test" object:nil];
-        NSLog(@"%@", [[NSNotificationCenter vis_defaultCenter] vis_mapsWithObject:self]);
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(test) name:@"test" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"test" object:nil];
+        NSLog(@"%@", [[NSNotificationCenter defaultCenter] vis_mapsWithObject:self]);
     }
     NSLog(@"%f", CACurrentMediaTime() - time);
 }
