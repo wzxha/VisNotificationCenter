@@ -9,10 +9,3 @@ Address some of the issues in the NSNotificationCenter
 |观察者|通知名|发送者|方法|
 | ----|:----:| ---:| ---:|
 |Observer|Name|Object|SEL|
-
-# In Use
-```objc
- [[NSNotificationCenter vis_defaultCenter] addObserver:self selector:@selector(test) name:@"test" object:nil];
- ...
- ...
-```
