@@ -7,15 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VisNotificationCenter.h"
 
 @interface NSNotificationCenter (VisNotificationCenter)
 
-FOUNDATION_EXTERN NSString * VIS_NOTI_OBSERVER;
-FOUNDATION_EXTERN NSString * VIS_NOTI_NAME;
-FOUNDATION_EXTERN NSString * VIS_NOTI_OBJECT;
-FOUNDATION_EXTERN NSString * VIS_NOTI_SEL;
-
-- (NSDictionary <NSString *, NSArray *> *)vis_allObservers;
-- (NSArray <NSDictionary *> *)vis_mapsWithObj:(id)obj;
++ (VisNotificationCenter *)vis_defaultCenter;
 
 @end
