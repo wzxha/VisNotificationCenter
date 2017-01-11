@@ -11,8 +11,6 @@
 
 @interface NSNotificationCenter (VisNotificationCenter)
 
-+ (VisNotificationCenter *)defaultCenter;
-
 - (NSDictionary <NSString *, NSArray *> *)vis_allObservers;
 - (NSArray <NSDictionary *> *)vis_mapsWithObject:(id)obj;
 
